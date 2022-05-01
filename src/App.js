@@ -1,11 +1,12 @@
-import contextProvider from "./Contexts/contextProvider";
-
+//Contexts
+import ContextProvider from "./Contexts/ContextProvider";
+import Store from "./components/Store";
 function App() {
   return (
     <div>
-      <contextProvider>
-        
-      </contextProvider>
+      <ContextProvider>
+         <Store/>
+      </ContextProvider>
     </div>
   );
 }
