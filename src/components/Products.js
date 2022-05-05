@@ -21,7 +21,7 @@ const Products = ({productData}) => {
                 {
                     quantityCount(state , productData.id) > 1 && <button onClick={() => dispatch({type: "DECREASE" , payload: productData})}>-</button>}
 
-                {quantityCount(state , productData.id) === 1 && <button onClick={() => dispatch({type: "REMOVE_ITEM", payload: productData})}><img src={trashIcon} style={{width: "20px"}}/></button>}
+                {quantityCount(state , productData.id) === 1 && <button onClick={() => dispatch({type: "REMOVE_ITEM", payload: productData})}><img src={trashIcon} alt='remove' style={{width: "20px"}}/></button>}
               {
                   isInCart(state , productData.id) ?
                   <button onClick={() => dispatch({type: "INCREASE" , payload: productData})}>+</button> :
