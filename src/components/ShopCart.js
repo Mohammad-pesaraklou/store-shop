@@ -34,7 +34,7 @@ import styles from './shopCart.module.css'
                 state.checkout && <div className={styles.complete}>
                     <h3>checkout successfully</h3>
                     <Link to='/products'>Products</Link>
-                    </div>
+                    </div> 
             }
 
             {

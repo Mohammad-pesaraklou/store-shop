@@ -20,7 +20,8 @@ const Products = ({productData}) => {
             <div className={styles.linkContainer}>
               <Link  to={`/products/${productData.id}`}>Details</Link>  
             <div className={styles.buttonContainer}>
-                {quantityCount(state, productData.id) === 1 && <button className={styles.smallButton} onClick={() => dispatch({type: "REMOVE_ITEM", payload: productData})}><img src={trashIcon} alt="trash" /></button>}
+                {quantityCount(state, productData.id) === 1 &&
+                 <button className={styles.smallButton} onClick={() => dispatch({type: "REMOVE_ITEM", payload: productData})}><img src={trashIcon} alt="trash" /></button>}
                 {quantityCount(state, productData.id) > 1 && <button className={styles.smallButton} onClick={() => dispatch({type: "DECREASE", payload: productData})}>-</button>}
                 {quantityCount(state, productData.id) > 0 && <span className={styles.counter}>{quantityCount(state, productData.id)}</span>}
                 { 
